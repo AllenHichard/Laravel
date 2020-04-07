@@ -1,0 +1,74 @@
+/*function criarTableAux(f_subdivisoes, f_municipios, f_nomeProdutos, f_valorProdutos, f_datas, f_valores) {
+    google.charts.load('current', {'packages': ['table']});
+    google.charts.setOnLoadCallback(drawTable);
+    //caso seja necessário uma tabela que não precise ser impressa, o google chart table é uma boa opção
+    function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Estado');
+        data.addColumn('string', 'Subdivisao');
+        data.addColumn('string', 'Municipio');
+        data.addColumn('string', 'Nome-Produto');
+        data.addColumn('string', 'Característica - Valor Produto');
+        data.addColumn('string', 'Data');
+        data.addColumn('number', 'Valor');
+        for (var i = 0; i < f_valores.length; i++) {
+            data.addRows(
+                [["BAHIA", f_subdivisoes[0].nome, f_municipios, f_nomeProdutos, f_valorProdutos, f_datas[i].data, parseFloat(f_valores[i].valor)]]
+            );
+        }
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+    }
+}*/
+
+<div class="row mb-2 containerX" style="margin-top: 300px">
+                <div id="curve_chart_pecuaria">
+                    <p class="text-center" style="color: black">Uma série temporal é um conjunto de observações ordenadas no tempo. Nessa série são mostradas as
+                        produções dos municípios selecionados no filtro.  Através da série temporal é <br /> possível ter uma descrição do passado, um procedimento lógico
+                        para realizar previsões e fazer uso desses dados históricos. Se os dados passados são
+                        indicativos do que se esperar no futuro.
+                    </p>
+                </div>
+            </div>
+            <div class="row mb-2 containerX" style="margin-top: 300px">
+
+                <div id="columnchart_values_pecuaria">
+                    <p class="text-center" style="color: black">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto <br /> beatae vitae
+                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                        est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                        modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
+                        quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                    </p>
+                </div>
+            </div>
+            <div class="row mb-2 containerX" style="margin-top: 300px">
+                <div id="piechart_3d_pecuaria">
+                    <p class="text-center" style="color: black">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto <br /> beatae vitae
+                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                        est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                        modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
+                        quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                    </p>
+                </div>
+            </div>
+            <div class="row mb-2 containerX" style="margin-top: 300px">
+                <div id="bubble_chart_div_pecuaria">
+                    <p class="text-center" style="color: black">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto <br /> beatae vitae
+                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                        est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                        modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
+                        quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                    </p>
+                </div>
+            </div>

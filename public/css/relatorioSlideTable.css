@@ -1,0 +1,38 @@
+body{
+    font-size: 16px;
+    color: #666666;
+}
+#abas{
+    margin:0;
+    padding:0;
+}
+#abas li{
+    display:inline-block;
+    border: 1px solid #CCCCCC;
+    border-bottom:none;
+    background-color:#EEEEEE;
+}
+#abas li a{
+    padding: 10px 20px;
+    display: block;
+    text-decoration:none;
+    color:#000000;
+}
+#abas li.selecionada{
+    background-color:#FFFFFF;
+    position:relative;
+    top:1px;
+    font-weight:bold;
+}
+#abas li.selecionada a{
+    padding-top: 11px
+}
+.conteudo{
+    display:flex;
+    padding:10px;
+    border: 1px solid #CCCCCC;
+    display:none;
+}
+.conteudo.visivel{
+    display:flex;
+}

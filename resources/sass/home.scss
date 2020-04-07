@@ -1,0 +1,774 @@
+@import "variables";
+@import "mixin";
+$transparenteBackground: #00000020;
+
+body {
+    overflow-x: hidden;
+}
+
+nav.hide {
+    background-color: #0000 !important;
+    box-shadow: none !important;
+    @include transition(all 0.6s);
+
+    a {
+        color: white !important;
+    }
+
+    .navbar-nav .dropdown-menu {
+        background-color: #00000040;
+    }
+
+    img {
+        background-color: #ffffffd4;
+    }
+
+    @media only screen and (max-width: 761px) {
+        background-color: #000 !important;
+    }
+}
+
+nav {
+    @include transition(all 0.6s);
+}
+
+img#bg {
+    position: fixed;
+    top: -7vh;
+    left: 0;
+    z-index: -1;
+    height: 110%;
+}
+
+section {
+    h3.section-title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 75px;
+        padding-top: 100px;
+    }
+}
+
+section#contato {
+    background-color: $transparenteBackground;
+    padding: 25vh 30px;
+
+    .sideContactForm.col-lg-6 p {
+        color: white;
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    form input, textarea {
+        margin: 5px 0px;
+        background-color: #ffffffe8;
+        color: black;
+        padding: 5px 17px;
+        border: none;
+        font-size: 17px;
+        border-left: double 17px #000000b8;
+        width: 100%;
+    }
+}
+
+footer {
+    background-color: $claro;
+
+    .text-uppercase {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .links a {
+        font-size: 12px;
+    }
+
+    div {
+        color: $escuro;
+        background-color: $claro;
+
+        &.footer-copyright {
+            background-color: $escuro;
+            font-size: 10px;
+
+            p {
+                line-height: 0px
+            }
+        }
+    }
+
+    .images {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+}
+
+section#sobre {
+    // icons
+    $backgroundColor: $escuro;
+    $iconColor: $claro;
+    $radius: 10px;
+    $size: 200px;
+    background-color: $backgroundColor;
+    min-height: $size*10/3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @-webkit-keyframes move {
+        0% {
+            margin-top: 0px;
+        }
+
+        50% {
+            margin-top: -20px;
+        }
+
+        100% {
+            margin-top: 0px;
+        }
+    }
+
+    @keyframes move {
+        0% {
+            margin-top: 0px;
+        }
+
+        50% {
+            margin-top: -20px;
+        }
+
+        100% {
+            margin-top: 0px;
+        }
+    }
+
+    @keyframes blink1 {
+        0% {
+            background-color: white;
+        }
+
+        50% {
+            background-color: green;
+        }
+
+        100% {
+            background-color: white;
+        }
+    }
+
+    @keyframes blink2 {
+        from {
+            background-color: white;
+        }
+
+        to {
+            background-color: blue;
+        }
+    }
+
+    @keyframes blink3 {
+        0% {
+            background-color: #dfdf1b;
+        }
+
+        50% {
+            background-color: white;
+        }
+
+        100% {
+            background-color: #dfdf1b;
+        }
+    }
+
+    div.icons {
+        display: inline-flex;
+        margin: 0 auto;
+
+        div.icon {
+            @media screen and (min-width: 1100px) {
+                margin: 0 80px;
+            }
+
+            @media screen and (max-width: 1100px) {
+                margin: 0 15px;
+            }
+
+            @media screen and (max-width: 700px) {
+                margin: 0 auto;
+                margin-bottom: 200px;
+            }
+
+            display: flex;
+
+            p {
+                color: white;
+                width: 10100%;
+                text-align: center;
+                align-self: flex-end;
+                position: relative;
+                top: 160px;
+            }
+        }
+
+        .server {
+            width: $size;
+            height: $size;
+
+            div {
+                position: absolute;
+                background-color: $iconColor;
+                width: $size;
+                height: $size/3 - $size/100;
+                border-radius: $radius;
+            }
+
+            div:after, div:before {
+                position: absolute;
+                margin-left: $size*3/5;
+                margin-top: $size/10;
+                content: "";
+                width: 25px;
+                height: 25px;
+                background-color: white;
+                border-radius: 100%;
+            }
+
+            div:nth-child(1):before {
+                background-color: green;
+                animation-name: blink1;
+            }
+
+            div:nth-child(2):before {
+                background-color: blue;
+                animation-name: blink2;
+            }
+
+            div:nth-child(3):after {
+                background-color: #dfdf1b;
+                animation-name: blink3;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            div:before {
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+
+            div:after {
+                margin-left: $size*4/5;
+            }
+
+            .top {}
+
+            .middle {
+                margin-top: $size/3;
+                opacity: 0.7;
+            }
+
+            .bottom {
+                margin-top: $size*2/3;
+            }
+        }
+
+        .satellite {
+            width: $size;
+            height: $size;
+
+            div.rotated {
+                animation-name: move;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                width: $size;
+                height: $size;
+                @include rotate(-125deg);
+                position: absolute;
+            }
+
+            div.rotated div {
+                position: absolute;
+                background-color: $iconColor;
+            }
+
+            .back {
+                height: $size*2/5;
+                width: $size;
+                border-radius: $radius;
+                margin-top: $size/5;
+                opacity: 0.7;
+            }
+
+            .front {
+                height: $size;
+                width: $size/3;
+                border-radius: $radius;
+                margin-left: $size/3;
+            }
+
+            .antenna-base {
+                height: $size/3;
+                width: $size*2/3;
+                border-bottom-left-radius: $radius;
+                border-bottom-right-radius: $radius;
+                border-top-left-radius: 100% $size/2;
+                border-top-right-radius: 100% $size/2;
+                margin-top: $size*2/3;
+                margin-left: $size/6;
+            }
+
+            .antenna-hold {
+                width: $size/10;
+                height: $size/10;
+                margin-top: $size;
+                margin-left: $size/2 - $size/20;
+            }
+
+            .antenna-ball {
+                border-radius: 100%;
+                width: $size/6;
+                height: $size/6;
+                margin-top: $size + $size/20;
+                margin-left: $size/2 - $size/12;
+            }
+        }
+
+        .product {
+            width: $size;
+            height: $size;
+
+            div.document {
+                margin: 0 auto;
+                position: absolute;
+                background-color: $iconColor;
+                width: $size;
+                height: $size;
+                border-top-right-radius: 50%;
+
+                div {
+                    position: absolute;
+                }
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-left: $size/5 solid transparent;
+                    border-right: $size/5 solid transparent;
+                    border-top: $size/5 solid $backgroundColor;
+                    margin-top: -30px;
+                    margin-left: -20px;
+                    @include rotate(45deg);
+                    border-radius: $radius;
+                }
+
+                .map {
+                    position: relative;
+                    top: 75px;
+                    left: 60px;
+
+                    svg path {
+                        fill: $backgroundColor;
+                        fill-opacity: 1;
+                        stroke: none;
+                        stroke-width: 393.96456909;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-miterlimit: 4;
+                        stroke-dasharray: none;
+                        stroke-opacity: 1;
+                    }
+                }
+
+                .chart {
+                    height: 45px;
+                    width: 20px;
+                    background-color: $backgroundColor;
+                    border-radius: $radius/2;
+                    margin-top: 50px;
+                    margin-left: 50px;
+
+                    &:after, &:before {
+                        border-radius: $radius/2;
+                        content: "";
+                        position: absolute;
+                        background-color: $backgroundColor;
+                        width: 20px;
+                    }
+
+                    &:before {
+                        height: 50px;
+                        margin-top: -5px;
+                        margin-left: 25px;
+                    }
+
+                    &:after {
+                        height: 40px;
+                        margin-top: 5px;
+                        margin-left: 49px;
+                    }
+                }
+
+                .ok {
+                    width: $size/4;
+                    height: $size/4;
+                    border-radius: 100%;
+                    background-color: green;
+                    margin: -15px;
+
+                    &:after, &:before {
+                        border-radius: $radius;
+                        content: "";
+                        position: absolute;
+                        background-color: $iconColor;
+                    }
+
+                    &:after {
+                        width: 10px;
+                        height: 30px;
+                        transform: rotate(50deg);
+                        margin-left: 25px;
+                        margin-top: 10px;
+                    }
+
+                    &:before {
+                        width: 10px;
+                        height: 20px;
+                        margin: 20px;
+                        transform: rotate(-40deg);
+                        margin-left: 13px;
+                        margin-top: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section#quemSomos {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    background-color: $claro;
+    color: $escuro;
+
+    /*  Team Starts */
+    .team-members {
+        transform: rotate(-45deg);
+    }
+
+    .team-members li>div {
+        float: left;
+        width: 20%;
+        pointer-events: all;
+    }
+
+    .team-members li:nth-child(2)>div:first-child {
+        margin-left: 20%;
+    }
+
+    .team-members li:last-child>div:first-child {
+        margin-left: 40%;
+    }
+
+    .member-details>div {
+        background-color: $claro;
+        margin: 5px;
+    }
+
+    $imgTeam: 137px;
+
+    .member-details img {
+        transform: rotate(45deg) translate(0, 15px) scale(1.2);
+        display: block;
+        width: $imgTeam;
+        height: $imgTeam;
+    }
+
+    /* hover content - style */
+    .member-details>div {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .member-info {
+        position: absolute;
+        top: 50%;
+        transform: rotate(45deg) translate(-12px, 15px);
+        left: 0;
+        right: 0;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .member-info h3,
+    .member-info p {
+        margin: 0;
+        color: #fff;
+        position: relative;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .member-info h3 {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+        top: -100px;
+    }
+
+    .member-info p {
+        font-weight: 300;
+        font-size: 12px;
+        bottom: -150px;
+    }
+
+    .member-details>div:after {
+        content: '';
+        background-image: linear-gradient(45deg, rgb(172, 90, 77) 30%, transparent 50%);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* hover content - onhover */
+    .member-details *,
+    .member-details>div:after {
+        cursor: pointer;
+        transition: all .4s ease;
+    }
+
+    .member-details:hover *,
+    .member-details:hover>div:after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .member-details:hover .member-info h3 {
+        top: 0;
+    }
+
+    .member-details:hover .member-info p {
+        bottom: 0;
+    }
+
+    /* Team overview */
+    @media only screen and (min-width: 992px) {
+        .team-overview {
+            &.first {
+                position: relative;
+                top: -50px;
+                right: 15px;
+            }
+
+            &.second {
+                position: relative;
+                top: 40px;
+                right: -15px;
+            }
+        }
+    }
+
+    .team-overview h2 {
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .team-overview>a {
+        margin-bottom: 30px;
+        display: block;
+    }
+
+    .team-overview>a:before {
+        content: '';
+        width: 10px;
+        height: 2px;
+        position: relative;
+        top: -3px;
+        margin-right: 5px;
+        background-color: #ccc;
+        display: inline-block;
+    }
+
+    /* For centering elements - optional - Can use table,tablecell instead */
+    .flex-center {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex-center>div:first-child {
+        order: 2;
+    }
+
+    /* RESPONSIVE */
+    @media only screen and (min-width: 993px) {
+        ul.second {
+            position: relative;
+            bottom: 128px;
+            left: 70px;
+            pointer-events: none;
+        }
+    }
+
+    @media only screen and (max-width: 1998px) {
+        // div.container{
+        //   max-width: 100%;
+        // }
+    }
+
+    @media only screen and (max-width : 992px) {
+        .sm-no-flex {
+            display: block;
+        }
+
+        .sm-no-float {
+            float: none !important;
+        }
+
+        .sm-text-center {
+            text-align: center;
+        }
+    }
+
+    @media only screen and (max-width : 550px) {
+        .team-members li {
+            text-align: center;
+        }
+
+        .team-members li>div {
+            float: none;
+            display: inline-block;
+            width: 30%;
+            margin: 0 !important;
+        }
+
+        .team-members {
+            transform: rotate(0);
+        }
+
+        .member-details img {
+            transform: rotate(0) translate(0, 0);
+        }
+
+        .team-overview {
+            padding: 15px;
+        }
+    }
+
+    @media only screen and (max-width : 399px) {
+        .team-members li>div {
+            width: 48%;
+        }
+    }
+}
+
+section#welcome {
+    background-color: $transparenteBackground;
+    padding-bottom: 40vh;
+    min-height: 90vh;
+
+    div.btn-interage {
+        top: 100px;
+        position: relative;
+        width: 345px;
+        margin: 0 auto;
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        button {
+            font-size: 18px;
+            color: white;
+            background-color: #00000005;
+            border: none;
+            padding: 17px;
+            @include box-shadow (0px 0px 10px 1px rgba(255, 255, 255, 0.4));
+            font-weight: bold;
+            @include transition(all 0.3s);
+        }
+
+        button:hover {
+            background-color: #00000050;
+            @include transition(all 0.3s);
+        }
+    }
+
+    div.titulo {
+        position: relative;
+        color: white;
+        top: 20vh;
+
+        span {
+            font-weight: bold;
+            font-size: 30px;
+            position: relative;
+            top: 4px;
+
+            a {
+                background-color: #ffffff80;
+                color: #273935;
+                padding: 0px 10px;
+                border-radius: 4px;
+                @include transition(all 0.3s);
+            }
+
+            a:hover {
+                background-color: #273935;
+                color: #ffffff80;
+                @include transition(all 0.3s);
+            }
+        }
+
+        h1 {
+            width: 57%;
+            position: relative;
+            color: white;
+            font-weight: bold;
+            font-size: 47px;
+            letter-spacing: -1px;
+            border-bottom: dotted 4px;
+            text-align: right;
+            padding-right: 26px;
+            padding-bottom: 4px;
+
+            @media screen and (max-width: 600px) {
+                padding-left: 15px;
+                font-size: 30px;
+                text-align: left;
+                width: 100%;
+            }
+        }
+
+        p {
+            width: 57%;
+            position: relative;
+            text-align: left;
+            padding: 0px 65px;
+            color: white;
+
+            @media screen and (max-width: 600px) {
+                width: 100%;
+                padding: 0px 35px;
+            }
+        }
+    }
+}

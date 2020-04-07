@@ -1,0 +1,816 @@
+body {
+  overflow-x: hidden;
+}
+
+nav.hide {
+  background-color: #0000 !important;
+  box-shadow: none !important;
+  transition: all 0.6s;
+}
+
+nav.hide a {
+  color: white !important;
+}
+
+nav.hide .navbar-nav .dropdown-menu {
+  background-color: #00000040;
+}
+
+nav.hide img {
+  background-color: #ffffffd4;
+}
+
+@media only screen and (max-width: 761px) {
+  nav.hide {
+    background-color: #000 !important;
+  }
+}
+
+nav {
+  transition: all 0.6s;
+}
+
+img#bg {
+  position: fixed;
+  top: -7vh;
+  left: 0;
+  z-index: -1;
+  height: 110%;
+}
+
+section h3.section-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 75px;
+  padding-top: 100px;
+}
+
+section#contato {
+  background-color: #00000020;
+  padding: 25vh 30px;
+}
+
+section#contato .sideContactForm.col-lg-6 p {
+  color: white;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+section#contato form input,
+section#contato textarea {
+  margin: 5px 0px;
+  background-color: #ffffffe8;
+  color: black;
+  padding: 5px 17px;
+  border: none;
+  font-size: 17px;
+  border-left: double 17px #000000b8;
+  width: 100%;
+}
+
+footer {
+  background-color: #f8f9fa;
+}
+
+footer .text-uppercase {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer .links a {
+  font-size: 12px;
+}
+
+footer div {
+  color: #424c55;
+  background-color: #f8f9fa;
+}
+
+footer div.footer-copyright {
+  background-color: #424c55;
+  font-size: 10px;
+}
+
+footer div.footer-copyright p {
+  line-height: 0px;
+}
+
+footer .images {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .images img {
+  margin: 0 auto;
+}
+
+section#sobre {
+  background-color: #424c55;
+  min-height: 666.6666666667px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@-webkit-keyframes move {
+  0% {
+    margin-top: 0px;
+  }
+
+  50% {
+    margin-top: -20px;
+  }
+
+  100% {
+    margin-top: 0px;
+  }
+}
+
+@keyframes move {
+  0% {
+    margin-top: 0px;
+  }
+
+  50% {
+    margin-top: -20px;
+  }
+
+  100% {
+    margin-top: 0px;
+  }
+}
+
+@-webkit-keyframes blink1 {
+  0% {
+    background-color: white;
+  }
+
+  50% {
+    background-color: green;
+  }
+
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes blink1 {
+  0% {
+    background-color: white;
+  }
+
+  50% {
+    background-color: green;
+  }
+
+  100% {
+    background-color: white;
+  }
+}
+
+@-webkit-keyframes blink2 {
+  from {
+    background-color: white;
+  }
+
+  to {
+    background-color: blue;
+  }
+}
+
+@keyframes blink2 {
+  from {
+    background-color: white;
+  }
+
+  to {
+    background-color: blue;
+  }
+}
+
+@-webkit-keyframes blink3 {
+  0% {
+    background-color: #dfdf1b;
+  }
+
+  50% {
+    background-color: white;
+  }
+
+  100% {
+    background-color: #dfdf1b;
+  }
+}
+
+@keyframes blink3 {
+  0% {
+    background-color: #dfdf1b;
+  }
+
+  50% {
+    background-color: white;
+  }
+
+  100% {
+    background-color: #dfdf1b;
+  }
+}
+
+section#sobre div.icons {
+  display: inline-flex;
+  margin: 0 auto;
+}
+
+section#sobre div.icons div.icon {
+  display: flex;
+}
+
+@media screen and (min-width: 1100px) {
+  section#sobre div.icons div.icon {
+    margin: 0 80px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  section#sobre div.icons div.icon {
+    margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section#sobre div.icons div.icon {
+    margin: 0 auto;
+    margin-bottom: 200px;
+  }
+}
+
+section#sobre div.icons div.icon p {
+  color: white;
+  width: 10100%;
+  text-align: center;
+  align-self: flex-end;
+  position: relative;
+  top: 160px;
+}
+
+section#sobre div.icons .server {
+  width: 200px;
+  height: 200px;
+}
+
+section#sobre div.icons .server div {
+  position: absolute;
+  background-color: #f8f9fa;
+  width: 200px;
+  height: 64.6666666667px;
+  border-radius: 10px;
+}
+
+section#sobre div.icons .server div:after,
+section#sobre div.icons .server div:before {
+  position: absolute;
+  margin-left: 120px;
+  margin-top: 20px;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 100%;
+}
+
+section#sobre div.icons .server div:nth-child(1):before {
+  background-color: green;
+  -webkit-animation-name: blink1;
+          animation-name: blink1;
+}
+
+section#sobre div.icons .server div:nth-child(2):before {
+  background-color: blue;
+  -webkit-animation-name: blink2;
+          animation-name: blink2;
+}
+
+section#sobre div.icons .server div:nth-child(3):after {
+  background-color: #dfdf1b;
+  -webkit-animation-name: blink3;
+          animation-name: blink3;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+section#sobre div.icons .server div:before {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+section#sobre div.icons .server div:after {
+  margin-left: 160px;
+}
+
+section#sobre div.icons .server .middle {
+  margin-top: 66.6666666667px;
+  opacity: 0.7;
+}
+
+section#sobre div.icons .server .bottom {
+  margin-top: 133.3333333333px;
+}
+
+section#sobre div.icons .satellite {
+  width: 200px;
+  height: 200px;
+}
+
+section#sobre div.icons .satellite div.rotated {
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  width: 200px;
+  height: 200px;
+  transform: rotate(-125deg);
+  position: absolute;
+}
+
+section#sobre div.icons .satellite div.rotated div {
+  position: absolute;
+  background-color: #f8f9fa;
+}
+
+section#sobre div.icons .satellite .back {
+  height: 80px;
+  width: 200px;
+  border-radius: 10px;
+  margin-top: 40px;
+  opacity: 0.7;
+}
+
+section#sobre div.icons .satellite .front {
+  height: 200px;
+  width: 66.6666666667px;
+  border-radius: 10px;
+  margin-left: 66.6666666667px;
+}
+
+section#sobre div.icons .satellite .antenna-base {
+  height: 66.6666666667px;
+  width: 133.3333333333px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 100% 100px;
+  border-top-right-radius: 100% 100px;
+  margin-top: 133.3333333333px;
+  margin-left: 33.3333333333px;
+}
+
+section#sobre div.icons .satellite .antenna-hold {
+  width: 20px;
+  height: 20px;
+  margin-top: 200px;
+  margin-left: 90px;
+}
+
+section#sobre div.icons .satellite .antenna-ball {
+  border-radius: 100%;
+  width: 33.3333333333px;
+  height: 33.3333333333px;
+  margin-top: 210px;
+  margin-left: 83.3333333333px;
+}
+
+section#sobre div.icons .product {
+  width: 200px;
+  height: 200px;
+}
+
+section#sobre div.icons .product div.document {
+  margin: 0 auto;
+  position: absolute;
+  background-color: #f8f9fa;
+  width: 200px;
+  height: 200px;
+  border-top-right-radius: 50%;
+}
+
+section#sobre div.icons .product div.document div {
+  position: absolute;
+}
+
+section#sobre div.icons .product div.document:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid #424c55;
+  margin-top: -30px;
+  margin-left: -20px;
+  transform: rotate(45deg);
+  border-radius: 10px;
+}
+
+section#sobre div.icons .product div.document .map {
+  position: relative;
+  top: 75px;
+  left: 60px;
+}
+
+section#sobre div.icons .product div.document .map svg path {
+  fill: #424c55;
+  fill-opacity: 1;
+  stroke: none;
+  stroke-width: 393.96456909;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-opacity: 1;
+}
+
+section#sobre div.icons .product div.document .chart {
+  height: 45px;
+  width: 20px;
+  background-color: #424c55;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+section#sobre div.icons .product div.document .chart:after,
+section#sobre div.icons .product div.document .chart:before {
+  border-radius: 5px;
+  content: "";
+  position: absolute;
+  background-color: #424c55;
+  width: 20px;
+}
+
+section#sobre div.icons .product div.document .chart:before {
+  height: 50px;
+  margin-top: -5px;
+  margin-left: 25px;
+}
+
+section#sobre div.icons .product div.document .chart:after {
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 49px;
+}
+
+section#sobre div.icons .product div.document .ok {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: green;
+  margin: -15px;
+}
+
+section#sobre div.icons .product div.document .ok:after,
+section#sobre div.icons .product div.document .ok:before {
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  background-color: #f8f9fa;
+}
+
+section#sobre div.icons .product div.document .ok:after {
+  width: 10px;
+  height: 30px;
+  transform: rotate(50deg);
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+section#sobre div.icons .product div.document .ok:before {
+  width: 10px;
+  height: 20px;
+  margin: 20px;
+  transform: rotate(-40deg);
+  margin-left: 13px;
+  margin-top: 18px;
+}
+
+section#quemSomos {
+  background-color: #f8f9fa;
+  color: #424c55;
+  /*  Team Starts */
+  /* hover content - style */
+  /* hover content - onhover */
+  /* Team overview */
+  /* For centering elements - optional - Can use table,tablecell instead */
+  /* RESPONSIVE */
+}
+
+section#quemSomos ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section#quemSomos .team-members {
+  transform: rotate(-45deg);
+}
+
+section#quemSomos .team-members li > div {
+  float: left;
+  width: 20%;
+  pointer-events: all;
+}
+
+section#quemSomos .team-members li:nth-child(2) > div:first-child {
+  margin-left: 20%;
+}
+
+section#quemSomos .team-members li:last-child > div:first-child {
+  margin-left: 40%;
+}
+
+section#quemSomos .member-details > div {
+  background-color: #f8f9fa;
+  margin: 5px;
+}
+
+section#quemSomos .member-details img {
+  transform: rotate(45deg) translate(0, 15px) scale(1.2);
+  display: block;
+  width: 137px;
+  height: 137px;
+}
+
+section#quemSomos .member-details > div {
+  position: relative;
+  overflow: hidden;
+}
+
+section#quemSomos .member-info {
+  position: absolute;
+  top: 50%;
+  transform: rotate(45deg) translate(-12px, 15px);
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+}
+
+section#quemSomos .member-info h3,
+section#quemSomos .member-info p {
+  margin: 0;
+  color: #fff;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+}
+
+section#quemSomos .member-info h3 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  top: -100px;
+}
+
+section#quemSomos .member-info p {
+  font-weight: 300;
+  font-size: 12px;
+  bottom: -150px;
+}
+
+section#quemSomos .member-details > div:after {
+  content: "";
+  background-image: linear-gradient(45deg, #ac5a4d 30%, transparent 50%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+section#quemSomos .member-details *,
+section#quemSomos .member-details > div:after {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+section#quemSomos .member-details:hover *,
+section#quemSomos .member-details:hover > div:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+section#quemSomos .member-details:hover .member-info h3 {
+  top: 0;
+}
+
+section#quemSomos .member-details:hover .member-info p {
+  bottom: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  section#quemSomos .team-overview.first {
+    position: relative;
+    top: -50px;
+    right: 15px;
+  }
+
+  section#quemSomos .team-overview.second {
+    position: relative;
+    top: 40px;
+    right: -15px;
+  }
+}
+
+section#quemSomos .team-overview h2 {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+section#quemSomos .team-overview > a {
+  margin-bottom: 30px;
+  display: block;
+}
+
+section#quemSomos .team-overview > a:before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  position: relative;
+  top: -3px;
+  margin-right: 5px;
+  background-color: #ccc;
+  display: inline-block;
+}
+
+section#quemSomos .flex-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+section#quemSomos .flex-center > div:first-child {
+  order: 2;
+}
+
+@media only screen and (min-width: 993px) {
+  section#quemSomos ul.second {
+    position: relative;
+    bottom: 128px;
+    left: 70px;
+    pointer-events: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  section#quemSomos .sm-no-flex {
+    display: block;
+  }
+
+  section#quemSomos .sm-no-float {
+    float: none !important;
+  }
+
+  section#quemSomos .sm-text-center {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  section#quemSomos .team-members li {
+    text-align: center;
+  }
+
+  section#quemSomos .team-members li > div {
+    float: none;
+    display: inline-block;
+    width: 30%;
+    margin: 0 !important;
+  }
+
+  section#quemSomos .team-members {
+    transform: rotate(0);
+  }
+
+  section#quemSomos .member-details img {
+    transform: rotate(0) translate(0, 0);
+  }
+
+  section#quemSomos .team-overview {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  section#quemSomos .team-members li > div {
+    width: 48%;
+  }
+}
+
+section#welcome {
+  background-color: #00000020;
+  padding-bottom: 40vh;
+  min-height: 90vh;
+}
+
+section#welcome div.btn-interage {
+  top: 100px;
+  position: relative;
+  width: 345px;
+  margin: 0 auto;
+}
+
+section#welcome div.btn-interage h2 {
+  margin-bottom: 30px;
+}
+
+section#welcome div.btn-interage button {
+  font-size: 18px;
+  color: white;
+  background-color: #00000005;
+  border: none;
+  padding: 17px;
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+section#welcome div.btn-interage button:hover {
+  background-color: #00000050;
+  transition: all 0.3s;
+}
+
+section#welcome div.titulo {
+  position: relative;
+  color: white;
+  top: 20vh;
+}
+
+section#welcome div.titulo span {
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+  top: 4px;
+}
+
+section#welcome div.titulo span a {
+  background-color: #ffffff80;
+  color: #273935;
+  padding: 0px 10px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+section#welcome div.titulo span a:hover {
+  background-color: #273935;
+  color: #ffffff80;
+  transition: all 0.3s;
+}
+
+section#welcome div.titulo h1 {
+  width: 57%;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-size: 47px;
+  letter-spacing: -1px;
+  border-bottom: dotted 4px;
+  text-align: right;
+  padding-right: 26px;
+  padding-bottom: 4px;
+}
+
+@media screen and (max-width: 600px) {
+  section#welcome div.titulo h1 {
+    padding-left: 15px;
+    font-size: 30px;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+section#welcome div.titulo p {
+  width: 57%;
+  position: relative;
+  text-align: left;
+  padding: 0px 65px;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  section#welcome div.titulo p {
+    width: 100%;
+    padding: 0px 35px;
+  }
+}
+

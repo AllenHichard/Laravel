@@ -1,0 +1,305 @@
+@import "variables";
+@import "mixin";
+$btnRadius: 4px;
+$btnSize: 45px;
+
+body {
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+.range input {
+    height: 10px !important;
+
+    &:focus {
+        background: white !important;
+    }
+}
+
+.range-labels {
+    li {
+        transform: rotate(40deg) !important;
+
+        &::before {
+            display: none !important;
+        }
+    }
+}
+
+// CUSTOMIZE LEAFLET
+.leaflet-control-zoom.leaflet-bar.leaflet-control {
+    border: none;
+    position: fixed;
+    top: 105px;
+
+    a {
+        width: $btnSize;
+        height: $btnSize;
+        font-size: 30px;
+        line-height: $btnSize;
+    }
+}
+
+// ----------------------
+.navbar {
+    display: none;
+}
+
+div.compass.leaflet-control {
+    margin: 25px;
+    border-radius: $btnRadius;
+}
+
+div.menu-search {
+    display: inline-flex;
+}
+
+div.menu-search {
+    input {
+        width: 300px;
+        height: $btnSize;
+        border: none;
+        padding: 10px;
+        border-top-right-radius: $btnRadius;
+        border-bottom-right-radius: $btnRadius;
+    }
+}
+
+#myInputautocomplete-list {
+    margin-left: 10px;
+    width: 250px;
+    font-size: 0.9rem;
+
+    div {
+        border-radius: 4px;
+        padding-left: 5px;
+
+        &:hover {
+            background-color: #8080804d;
+        }
+    }
+}
+
+div.menu-home{
+    position: absolute;
+    top: 55px;
+}
+
+div.menu-search, div#act-btn, div.menu-home {
+    button {
+        font-size: 18px;
+        border: none;
+        height: $btnSize;
+        width: $btnSize;
+        background-color: #fbfbfb;
+        border-radius: $btnRadius;
+        line-height: 0px;
+        cursor: pointer;
+
+        &.showFilter {
+            border-radius: 0px;
+            border-top-left-radius: $btnRadius;
+            border-bottom-left-radius: $btnRadius;
+        }
+    }
+}
+
+div#act-btn {
+    button {
+        position: absolute;
+        left: 10px;
+        padding: 13px;
+        overflow-x: hidden;
+
+        &:hover {
+            width: auto;
+        }
+
+        span {
+            display: flex;
+            line-height: 15px;
+
+            b {
+                margin-left: 20px;
+            }
+        }
+
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+                top: 160px + $i*($btnSize+5px);
+            }
+        }
+
+        &:nth-child(3) {
+            padding-left: 17px;
+        }
+    }
+}
+
+div#card {
+    display: block;
+    left: -371px;
+    position: absolute;
+    background-color: white;
+    color: $escuro;
+    overflow: auto;
+    z-index: 9999;
+    padding: 20px;
+    max-width: 345px;
+    height: 100%;
+    top:0;
+
+    /* Arrow */
+    .select::after {
+        content: "\25BC";
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        pointer-events: none;
+        margin-top: -28px;
+        background-color: #f4f2f2;
+        height: 30px;
+        width: 30px;
+        padding-left: 10px;
+    }
+
+    /* Transition */
+    .select:hover::after {
+        color: $escuro;
+    }
+
+    select.form-control {
+        border: none;
+        font-size: 0.9rem;
+        height: 30px;
+        padding: 0px 0px 0px 3px;
+        background-color: #f4f2f2;
+        margin-top: 4px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+
+        /* Remove IE arrow */
+        &::-ms-expand {
+            display: none;
+        }
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .title-card {
+        font-weight: bold;
+        font-size: 1rem;
+        a{
+            color: $escuro;
+        }
+    }
+
+    .dropdown-item {
+        font-size: 0.9rem;
+
+        &.active {
+            color: $claro;
+            background-color: $escuro;
+        }
+    }
+
+    button.close {
+        background: none;
+        border: none;
+        position: relative;
+        float: right;
+
+        &:hover {
+            color: $red;
+        }
+    }
+}
+
+div#map {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+div#legend {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    background-color: #ffffffb3;
+    padding: 20px;
+    border-radius: 7px;
+
+    p {
+        font-weight: bold;
+        margin-bottom: 2px;
+        color: black;
+        font-size: 1.0rem;
+    }
+
+    i {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+div#chart, div#PriceChart {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+
+    // Mudando dentro do charts js!
+    &>div:nth-child(1) {
+        svg {
+            border-radius: 10px;
+            cursor: move;
+
+            circle {
+                cursor: pointer;
+            }
+        }
+    }
+
+    //-------------------------
+}
+
+#ranking {
+    display: none;
+    position: fixed;
+    top: 357px;
+    left: 833px;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+
+    #rankingheader {
+        cursor: move;
+    }
+
+    .scrollbox {
+        height: 200px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        resize: both;
+    }
+    b,strong {
+        font-weight: bolder;
+        text-align: center;
+        color: black;
+        margin-left: 22px;
+    }
+}
+
+form .Search {
+    display: block;
+}
